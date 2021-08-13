@@ -1,0 +1,198 @@
+
+<!doctype html>
+
+
+<html lang="en">
+{% load static %}
+  <head>
+
+
+
+    {% block navbar %}
+
+    {% endblock navbar %}
+
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+<script src="{% static 'fontawesome_free/js/all.min.js' %}"></script>
+ <link href="{% static 'fontawesome_free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
+<!--datatable cdn start-->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
+
+
+    <script>
+    $(document).ready(function() {
+  $('#example').DataTable( {
+      dom: 'Bfrtip',
+      buttons: [
+          { extend: 'copyHtml5', footer: true },
+          { extend: 'excelHtml5', footer: true },
+          { extend: 'csvHtml5', footer: true },
+          { extend: 'pdfHtml5', footer: true }
+      ]
+  } );
+} );
+    </script>
+
+    <script>
+      $(document).ready(function()
+         {
+           $(".dropdown-toggle").dropdown();
+         }
+    );
+    </script>
+<!--datatable cdn end-->
+
+    <title>{% block title %}
+
+    {% endblock title%}|Anjali</title>
+  {% block head %}
+    {% endblock head %}
+
+
+  </head>
+  <body>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="width: 1518px;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Gym Managemnet</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+              {% if not request.user.is_staff %}
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/applications/">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/applications/About">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="/applications/Services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="/applications/Contact">Contact</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="/applications/login">Admin Log-in</a>
+            </li>
+
+
+            {% endif %}
+
+  {% if request.user.is_staff %}
+
+
+<div class="dropdown" style="margin:5px;" >
+
+<button type="button" name="button" class="btn dropdown-toggle btn-secondary" data-toggle+"dropdown">Enquiry</button>
+<div class="dropdown-menu">
+  <a href="/applications/view_enquiry" class="dropdown-item">View Enquiry</a>
+  <a href="/applications/add_enquiry" class="dropdown-item">Add Enquiry</a>
+
+</div>
+
+
+</div>
+
+
+
+<div class="dropdown" style="margin:5px;" >
+
+<button type="button" name="button" class="btn dropdown-toggle btn-secondary" data-toggle+"dropdown">Members</button>
+<div class="dropdown-menu">
+  <a href="/applications/add_member" class="dropdown-item">Add Members</a>
+  <a href="/applications/view_member" class="dropdown-item">View Members</a>
+
+</div>
+
+
+</div>
+
+
+
+<div class="dropdown" style="margin:5px;">
+
+<button type="button" name="button" class="btn dropdown-toggle btn-secondary" data-toggle+"dropdown">Equipments</button>
+<div class="dropdown-menu">
+  <a href="/applications/add_equipments" class="dropdown-item">Add Equipments</a>
+  <a href="/applications/view_equipments" class="dropdown-item">View Equipments</a>
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="dropdown" style="margin:5px;">
+
+<button type="button" name="button" class="btn dropdown-toggle btn-secondary" data-toggle+"dropdown">Plans</button>
+<div class="dropdown-menu">
+  <a href="/applications/add_plan" class="dropdown-item divider">Add Plan</a>
+  <a href="/applications/view_plan" class="dropdown-item">View Plan</a>
+
+</div>
+
+
+</div>
+
+
+<li class="btn btn-success">
+  <a class="nav-link " aria-current="page" href="/applications/admin_homepage">Dashboard</a>
+</li>
+
+
+
+
+{% endif %}
+
+
+
+{% block div %}
+
+{%endblock div %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    {% block body %}
+
+    {% endblock body %}
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>

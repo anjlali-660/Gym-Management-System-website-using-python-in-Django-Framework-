@@ -1,0 +1,345 @@
+{% extends 'application/base.html' %}
+{% load static %}
+
+{% block  title %}
+Services
+{%endblock title %}
+
+
+
+
+
+{% block body %}
+<style >
+
+body{
+  width:900px;
+}
+.top
+{
+  width:1000px;
+height:400px;
+
+}
+.top video{
+  width:1519px;
+}
+.heading{
+  position: relative;
+      left: 570px;
+      bottom: 312px
+
+}
+.heading h1{
+  font-size: 77px;
+font-family: serif;
+}
+
+.m1{
+  position:relative;
+  left:183px;
+}
+.m2{
+
+  position: relative;
+    left: 241px;
+}
+
+.m3{
+
+  position: relative;
+    left: 209px;
+}
+.middle{
+  display: flex;
+width: 168%;
+
+height: 450px;
+position: relative;
+top: 373px;
+}
+.pp2{
+
+  width:630px;
+  font-size:20px;
+  position:relative;
+  right:167px;
+}
+.pp4{
+
+  width:610px;
+  font-size:20px;
+  position:relative;
+  right:167px;
+}
+.pp{
+
+  width:670px;
+  font-size:20px;
+  position:relative;
+  right:167px;
+}
+.d1{
+  width: 226px;
+
+      position: relative;
+      left: 218px;
+      height: 510px;
+      display:block;
+}
+.d2{
+  width: 226px;
+
+position: relative;
+left: 431px;
+height: 510px;
+  display:block;
+}
+.d3{
+  width:226px;
+    display:block;
+
+  position:relative;
+  left:628px;
+  height:510px;
+}
+
+.middle3{
+
+  display: flex;
+width: 168%;
+
+height: 600px;
+position: relative;
+top: 210px;
+}
+.pp1{
+
+  width:610px;
+  font-size:20px;
+  position:relative;
+  right:167px;
+}
+.middle2{
+  display: flex;
+width: 168%;
+
+height: 600px;
+position: relative;
+top: 379px;
+}
+.endd{
+
+  display: flex;
+  flex-direction:column;
+  width: 168%;
+
+  height: 600px;
+  position: relative;
+  top: 180px;
+
+
+
+}
+
+
+
+.end1{
+  width:1507px;
+
+  position:relative;
+  left:0px;
+  height:510px;
+  background-color:#f0ecf6;
+}
+.end1 img{
+  height:150px;
+
+}
+.end2 img{
+  height:150px;
+  position: relative;
+left: 1203px;
+}
+.end3 img{
+  height:150px;
+}
+.end4 img{
+  height:150px;
+  width:300px;
+  position: relative;
+left: 1203px;
+}
+.end2{
+  width:1507px;
+    display:block;
+
+  background-color:#e1d9ec;
+  position:relative;
+  left:0px;
+  height:510px;
+}
+.end3{
+  width:1507px;
+    display:block;
+  background-color:#f0ecf6;
+  position:relative;
+  left:0px;
+  height:510px;
+}
+.end4{
+  width:1507px;
+    display:block;
+background-color:#e1d9ec;
+  position:relative;
+  left:0px;
+  height:510px;
+}
+
+</style>
+
+
+<div class="top">
+  <video  autoplay loop muted class="video-bg">
+  <source src="/static/videos/video2.mp4"  type="video/mp4">
+
+
+  </video>
+
+
+</div>
+
+<div class="heading">
+  <h1>Our Services</h1>
+</div>
+
+
+<div class="middle">
+<div class="m1">
+  <img src="{%static "images/service1.png" %}" alt="">
+  <div class="pp">
+    <p class="text-center">Every member gets a free, personalized Get Started Plan when they join.
+       Our friendly, professional staff is trained to help you along your
+
+      fitness journey, no matter how much support you need</p>
+
+  </div>
+
+</div>
+
+<div class="m3">
+  <img src="{%static "images/service2.png" %}" alt="">
+  <div class="pp1">
+    <p class="text-center">Getting to a healthier place is about more than going to the gym.
+      That’s why we offer personal training and classes when you’re here,
+       and the right tools to keep you on track when you’re not.</p>
+
+  </div>
+
+</div>
+</div>
+
+
+<div class="middle2">
+<div class="m1">
+  <img src="{%static "images/service3.png" %}" alt="">
+  <div class="pp2">
+    <p class="text-center">24/7 access to more than 4,500 locations worldwide and nearly 100 in India .
+       You’re joining the most convenient gym on the planet!</p>
+
+  </div>
+
+
+</div>
+
+<div class="m2">
+  <img src="{%static "images/service4.png" %}" alt="">
+  <div class="pp4 text-center">You’re not just joining a gym. You’re joining a supportive community
+    of like-minded people who are here to give you the encouragement you need.
+
+
+  </div>
+
+</div>
+</div>
+<div class="middle3">
+<div class="d1">
+<h2 style="color:purple; font-family:Arial Black;">Equipment</h2>
+<ul style="font-color:purple;font-family:Arial Black;">
+<li>  treadmills</li>
+<li>ellipticals</li>
+<li>exercise cycles</li>
+<li>stair climbers</li>
+<li>rowing machines</li>
+<li>free weights</li>
+<li>racks</li>
+<li>synergy 360 systems</li>
+<li>cable crossovers</li>
+<li>kettlebells</li>
+<li>lateral x trainers</li>
+<li>amt cross trainers</li>
+</ul>
+
+</div>
+
+<div class="d2">
+  <h2 style="color:purple; font-family:Arial Black;">Lifestyle</h2>
+  <ul style="font-color:purple;font-family:Arial Black;">
+  <li> Personal trainings</li>
+  <li>Team Workouts</li>
+  <li>Zumba Classes</li>
+  <li>Yoga Classes</li>
+  <li>CardioClasses</li>
+
+  </ul>
+
+
+</div>
+<div class="d3">
+  <h2 style="color:purple; font-family:Arial Black;">Services</h2>
+  <ul style="font-color:purple;font-family:Arial Black;">
+
+  <li>24-hour access</li>
+<li>24-hour security</li>
+<li>private sanitized restrooms</li>
+<li>private sanitized showers</li>
+<li>gym reservation system</li>
+<li>convenient parking</li>
+<li>worldwide club Access</li>
+<li>private restrooms</li>
+<li>health plan discounts</li>
+<li>wellness programs</li>
+  </ul>
+</div>
+</div>
+
+<div class="endd">
+  <div class="end1" id="o1">
+    <img src="{%static "images/5.jpg" %}" alt=""> <span style="position:relative; left:50px; color:purple;font-size:23px;
+    font-family:serif;font-weight:bold;">
+      This is a<b> Bronze Plan </b> which costs Rs.800 for 1 month and free Facial Yoga Classes(Alternate Days).
+</span>
+  </div>
+
+  <div class="end2" id="o2">
+<img src="{%static "images/19.jpg" %}" alt=""><span style="position:relative; right:273px; color:purple;
+font-size:21px;font-family:serif;font-weight:bold;">This is a <b>Silver Plan
+</b> which costs Rs.1500 for 2 Months and free Facial Yoga Classes and Zumba classes for 1 Month(Alternate Days).
+</span>
+  </div>
+
+  <div class="end3" id="o3">
+<img src="{%static "images/20.jpg" %}" alt=""><span style="position:relative; left:50px;
+color:purple;font-size:18px;font-family:serif;font-weight:bold;">This is a <b> Gold Plan</b>
+which costs Rs.2200 for 3 Months and free Facial Yoga Classes+Personal Trainer+Zumba Classes for 2 Months.(Alternate Days).
+</span>
+  </div>
+
+  <div class="end4" id="o4">
+<img src="{%static "images/ca6.jpg" %}" alt=""><span style="position:relative; right:281px;
+color:purple;font-size:18px;font-family:serif;font-weight:bold;">This is a <b>Platinum Plan
+ </b>which costs Rs.4500 for 6 Months and free Facial Yoga Classes_Zumba Classes+Personal Trainer for 4 Months.(Alternate Days).
+</span>
+  </div>
+</div>
+{% endblock body  %}

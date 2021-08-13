@@ -1,0 +1,70 @@
+{% extends 'application/base.html' %}
+
+{% block div %}
+
+<style >
+  .logoutt{
+    position:relative;
+    left:650px;
+    font-size:18px;
+  }
+
+</style>
+
+
+
+<div class="logoutt" >
+<li class="nav-item" >
+  <a class="nav-link btn btn-secondary"   aria-current="page" href="/applications/logout/">Log-Out</a>
+</li>
+</div>
+
+
+
+
+{%endblock div %}
+
+
+{% block title %}
+view_equipements
+{% endblock %}
+
+
+{% block body %}
+<div class="container" style="margin-top:90px;">
+<h2 class="text-center font-weight-bold font-family-calibri text-decoration-underline ">VIEW EQUIPMENTS</h2>
+<br><br>
+
+<table  id="example" class="table table-hover ">
+
+<thead>
+<tr>
+
+<th>Name</th>
+<th>Price</th>
+<th>Unit</th>
+<th>Date</th>
+<th>Description</th>
+  <th>Remove</th>
+
+</tr>
+</thead>
+<tbody>
+{% for i in equip %}
+<tr>
+  <td>{{i.Name}}</td>
+  <td>{{i.Price}}</td>
+  <td>{{i.Unit}}</td>
+  <td>{{i.Date}}</td>
+  <td>{{i.Description}}</td>
+
+  <td ><a  class="btn btn-danger" href="http://localhost:5000/applications/delete_equipments?pid={{i.id}}"
+    onclick="return confirm('Are you Sure?')">Delete</a></td>
+
+</tr>
+{%endfor %}
+</tbody>
+</table>
+
+
+{% endblock %}

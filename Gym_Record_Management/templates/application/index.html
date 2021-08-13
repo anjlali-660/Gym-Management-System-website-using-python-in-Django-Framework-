@@ -1,0 +1,178 @@
+{% extends 'application/base.html' %}
+{% load static %}
+{% block  head %}
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{%endblock head %}
+
+{% block  title %}
+index
+{%endblock title %}
+
+{% block body %}
+
+<div class="container-fluid px-0" >
+
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{%static "images/ca8.jpg" %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-noned-md-block">
+          <h3 style="font-size:36px;">Wecome to the Fitness Club</h3>
+          <p style="font-size:25px; text-shadow:1px 1px 2px #FFFAFA;">If you’re looking to join a supportive, welcoming gym community,
+            with people of all fitness levels who want to see you succeed,
+            you’ve come to the right place.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{%static "images/ca7.jpg" %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-noned-md-block">
+          <h3 style="font-size:36px; font-weight:bold;" >Get A Perfect Body Figure</h3>
+          <p style="font-size:25px; text-shadow:1px 1px 2px #FFFAFA;">Whether you’re new to working out or a fitness pro,
+            we’re here to provide a variety of training options, guidance, friendly support and to help you stay on track and reach your
+             goals in our clubs safeguarded against Covid19.
+
+</p>
+        </div>
+      </div>
+      <div class="carousel-item" >
+        <img id="ca2" src="{%static "images/ca2.jpg" %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-noned-md-block">
+          <h3  style="font-size:36px; font-weight:bold; color:white ;">Pain is Temporary but Glory is Forever</h3>
+          <p style="font-size:25px; text-shadow:1px 1px 2px white; ">Our goal is to make health and fitness attainable,
+            affordable and approachable.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+</div>
+
+<div class="para">
+  <div class="" >
+  <img src="{%static "images/pic1.jpg" %}" class="d-block w-100" alt="..."><br>
+  <h3 class="text-center">Group Personal Trainings</h3>
+  </div>
+        <div class="" style="margin-left:20px;">
+            <img src="{%static "images/pic2.jpg" %}" class="d-block w-100" alt="..."><br>
+            <h3 class="text-center">Individual Training Programs</h3>
+        </div>
+                <div class="" style="margin-left:20px;">
+                  <img src="{%static "images/pic3.jpg" %}" class="d-block w-100" alt="..."><br>
+                  <h3 class="text-center">Make your Body Harmonic</h3>
+                </div>
+
+
+</div>
+<div class="d1">
+<video  autoplay loop muted class="video-bg">
+<source src="/static/videos/video1.mp4"  type="video/mp4">
+
+
+</video>
+
+<div id="quote" style="margin-left:90px; margin-top:100px; border-radius:20px; margin-right:90px; margin-bottom:100px;background-color:#EEEEEE;">
+<h3 class="text-center"style="margin-top:60px; margin-left:30px; color:black; font-family:Arial;font-weight:bold;font-size:27px;">It’s time for a change again,
+   and this time, our call is to “Let’s make healthy happen“</h3>
+
+</div>
+</div>
+
+
+<div class="album py-5 bg-light">
+    <div class="container my-4">
+      <h1 id ="package"class=" text-center " style="font-weight:bold;text-decoration:underline;">Select the Package</h1>
+
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+                <img src="{%static "images/ca2.jpg" %}" class="d-block w-100" alt="...">
+
+            <div class="card-body">
+              <p class="card-text">Bronze Plan</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+    <a class="nav-linkk" href="/applications/Services/#o1">View Details</a>
+
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{%static "images/ca9.jpg" %}" class="d-block w-100" alt="...">
+            <div class="card-body">
+              <p class="card-text">Silver Plan</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                <a class="nav-linkk" href="/applications/Services/#o2">View Details</a>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src= "{%static "images/ca4.jpg" %}"class="d-block w-100" alt="...">
+            <div class="card-body">
+              <p class="card-text">Gold Plan</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a class="nav-linkk" href="/applications/Services/#o3">View Details</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{%static "images/4.JPEG" %}" class="d-block w-100" alt="...">
+            <div class="card-body">
+              <p class="card-text">Platinum Plan</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+  <a class="nav-linkk" href="/applications/Services/#o4">View Details</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+<div class="footerr">
+
+</div>
+<style>
+  .footerr{
+    width:1515px;
+    height:450px;
+      background:url("{%static "images/ca5.jpg" %}");
+
+  }
+</style>
+{% endblock body %}

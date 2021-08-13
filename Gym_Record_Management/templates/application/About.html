@@ -1,0 +1,193 @@
+{% extends 'application/base.html' %}       <!--extends tag is used for inheritence if templates in django -->
+{% load static %}     <!-- This template tag will generate the absolute  url of the static files-->
+
+<!-- This is used to define sections in your templates, so that if another template extends this one,it will replace
+whatever html code has been written inside of it-->
+
+{% block  title %}
+About
+{%endblock title %}
+
+
+{% block body %}
+<style >
+
+body{
+  margin:0px;
+  padding:0px;
+  background:url("{%static "images/about1.jpg" %}");
+  height:1300px;
+  width:1000px;
+}
+.div1{
+  height:100px;
+  width:1000px;
+
+  color:white;
+  margin-left:54px;
+  margin-top:68px;
+
+}
+#p1{
+  margin-top:20px;
+  font-size:18px;
+}
+#p3{
+  position:relative;
+  left:77px;
+  width:400px;
+}
+
+.footpara{
+
+  position: relative;
+  left: 204px;
+  bottom: 10px
+}
+
+
+#w2{
+  font-size:50px;
+  margin-top: 34px;
+
+    position: relative;
+    left: 295px;
+    bottom: 10px;
+    font-family:calibri;
+
+}
+#w3{
+  position:relative;
+  left:165px;
+
+
+}
+
+.p23{
+  position:relative;
+  left:231px;
+  width:480px;
+
+}
+.foot{
+  width:1519px;
+  height:400px;
+
+  position:relative;
+  top:378px;
+  background:url("{%static "images/about2.jpg" %}");
+}
+
+.end{
+  width:1519px;
+  height:450px;
+
+  position:relative;
+  top:81px;
+  background:url("{%static "images/ca4.jpg" %}");
+}
+.middle{
+
+  width:1519px;
+  height:400px;
+
+  position:relative;
+  top:378px;
+  background:url("{%static "images/ca5.jpg" %}");
+
+
+
+
+}
+.div1 h1{
+  transition:font-size 2s;
+    transition:background-color 3s;
+}
+.div1 h1:hover{
+  font-size:50px;
+  background-color:#959595;
+}
+.p23{
+  transition:background-color 2s;
+}
+
+.p23 :hover{
+background-color:#959595;
+}
+</style>
+
+<div class="div1">
+
+  <h3>A FEW WORDS ABOUT US</h3>
+<h1>We're Functioning For Almost 6 Years</h1>
+<div id="p1">
+
+
+<p>The Fitness Club is a Small Group & Personal Training Facility in Faridabad. We provide bespoke training, nutrition
+  guidance and a mix of both accountability
+   and community that strives to make fitness and health a valued and enjoyable part of your life,
+   rather than a chore.</p>
+
+   <p>We take men and women that have had a stop-start relationship with
+      exercise and “dieting”, and give them the tools, guidance and support to not only achieve impressive short-term body transformations,
+     but also to create the framework to keep and build upon their results for life</p>
+</div>
+<br><br>
+<div class="p23">
+
+
+<div id="p2">
+  <h2 >Created to help you live a better, </h2>
+  <div id="p3">
+    <h2>happier, healthier life.</h2>
+  </div>
+
+</div>
+</div>
+
+<br>
+<p class="text-center" style="font-size:19px;">We believe fitness should be accessible to everyone, everywhere,
+   regardless of income level or access to a gym. That's why we offer
+   hundreds of free, full-length workout videos, the most affordable and effective workout programs on the web,
+   meal plans, and helpful health, nutrition and fitness information.</p>
+
+</div>
+
+<br><br><br><br><br>
+
+
+<div class="middle">
+
+</div>
+
+
+<div class="foot" class=text-center">
+
+</div>
+
+<div class="w23">
+  <div id="w2">
+    <h2  style="font-size:60px;"> A little  bit about who
+    we are and</h2>
+    <div id="w3" >
+      <h2   style="font-size:60px;">how it all got started</h2>
+    </div>
+
+</div>
+
+</div>
+<div class="footpara">
+  <p class="text-center" style="font-size:19px; font-family:calibri">Fitness Club is created by me(Anjali Negi)
+     and my team of personal trainers who thought Fitness
+  should be accessible to everyone,regardless of their income.We felt like there was a lack of reliable health on the web,and too many
+people in the industry were more focused on monetary gain or experience than they were on good health.</p>
+
+
+</div>
+<div class="end">
+
+</div>
+
+
+
+{% endblock body %}

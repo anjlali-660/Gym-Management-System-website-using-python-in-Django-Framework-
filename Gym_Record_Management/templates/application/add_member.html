@@ -1,0 +1,92 @@
+{% extends 'application/base.html' %}
+{% block div %}
+
+<style >
+  .logoutt{
+    position:relative;
+    left:650px;
+    font-size:18px;
+  }
+</style>
+
+<div class="logoutt" >
+<li class="nav-item" >
+  <a class="nav-link btn btn-danger"   aria-current="page" href="/applications/logout/">Log-Out</a>
+</li>
+</div>
+
+{%endblock div %}
+
+{% block title %}
+add_member
+{% endblock title %}
+
+{% block body %}
+
+<div class="container" style="margin-top:90px;">
+<h2 class="text-center font-weight-bold font-family-calibri ">ADD MEMBERS</h2>
+
+<form method="post">
+
+  {%csrf_token %}
+  <label ><b>Name</b></label>
+  <input type="text" name="Name" class="form-control">
+  <label ><b>Contact</b></label>
+  <input type="text" name="Contact" class="form-control">
+  <label ><b>Age</b></label>
+  <input type="text" name="Age" class="form-control">
+
+  <label ><b>Gender</b></label>
+  <br><br>
+  <input type="radio" name="gender" ><b>Male</b>
+  <input type="radio" name="gender" ><b>Female</b>
+  <br>
+  <br>
+
+  <label ><b>Email_Id</b></label>
+  <input type="text" name="Email_Id" class="form-control">
+  <label ><b>Plan_Name</b></label>
+<select name="Plan" class="form-control">
+{% for i in plan %}
+<option value={{i.Name}}>
+  {{i.Name}}
+
+
+
+</option>
+{%endfor%}
+
+
+</select>
+<br>
+  <label ><b>Join_Date</b></label>
+  <input type="date" name="Join_Date" class="form-control">
+  <label ><b>Expiry_Date</b></label>
+  <input type="date" name="Expiry_Date" class="form-control">
+  <label ><b>Initial_Amount</b></label>
+  <input type="text" name="Initial_Amount" class="form-control">
+
+  <br>
+
+  <input type="submit" name="subbmit" value="SAVE" class="form-control btn btn-dark">
+
+
+  </form>
+
+  </div>
+
+  {% ifequal error "no" %}
+  <script>
+    alert("Record Saved Successfully");
+  </script>
+  {% endifequal %}
+
+  {% ifequal error "yes" %}
+  <script>
+    alert("Something Went Wrong, Try Again");
+  </script>
+  {% endifequal %}
+
+</form>
+
+{% endblock body %}

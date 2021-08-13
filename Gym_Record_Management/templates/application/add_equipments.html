@@ -1,0 +1,66 @@
+{% extends 'application/base.html' %}
+
+{% block div %}
+
+<style >
+  .logoutt{
+    position:relative;
+    left:650px;
+    font-size:18px;
+  }
+
+</style>
+
+<div class="logoutt" >
+<li class="nav-item" >
+  <a class="nav-link btn btn-danger"   aria-current="page" href="/applications/logout/">Log-Out</a>
+</li>
+</div>
+
+
+{%endblock div %}
+
+
+{% block title %}
+add_equipments
+{% endblock %}
+
+
+{% block body %}
+
+<div class="container" style="margin-top:90px;">
+<h2 class="text-center font-weight-bold font-family-calibri ">ADD EQUIPMENTS</h2>
+<form method="post">
+{%csrf_token %}
+<label ><b>Name</b></label>
+<input type="text" name="Name" class="form-control">
+<label ><b>Price</b></label>
+<input type="text" name="Price" class="form-control">
+<label ><b>Unit</b></label>
+<input type="text" name="Unit" class="form-control">
+<label ><b>Date</b></label>
+<input type="date" name="Date" class="form-control">
+<label ><b>Description</b></label>
+<br>
+<textarea name="Description" rows="3" cols="50" class="form-control"></textarea>
+<br>
+<br>
+
+<input type="submit" name="subbmit" value="SAVE" class="form-control btn btn-dark">
+
+</form>
+
+</div>
+
+{% ifequal error "no" %}
+<script>
+  alert("Record Saved Successfully");
+</script>
+{% endifequal %}
+
+{% ifequal error "yes" %}
+<script>
+  alert("Something Went Wrong, Try Again");
+</script>
+{% endifequal %}
+{% endblock body %}

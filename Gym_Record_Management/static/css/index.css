@@ -1,0 +1,53 @@
+.card-text{
+  font-weight: bold;
+
+}
+.nav-linkk{
+font-weight: bold;
+font-size:20px;
+text-decoration: none;
+
+
+}
+
+
+.nav-linkk:hover{
+  text-decoration: underline;
+}
+
+.para{
+  margin: 30px;
+width:95%;
+display: flex;
+  height:380px;
+  background-color:#fafafa;
+  font-style: Bahnschrift;
+  font-weight: bolder;
+
+
+}
+
+.d1{
+
+
+height:400px;
+display: flex;
+background-color:#fafafa;
+
+
+
+
+}
+
+
+
+
+.video-bg video{
+  overflow: hidden;
+  height: 398px;
+}
+
+#package{
+  margin:60px;
+
+}
